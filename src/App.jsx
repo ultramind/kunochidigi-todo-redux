@@ -1,3 +1,4 @@
+import AddInput from './components/AddInput'
 import Header from './components/Header'
 
 function App () {
@@ -5,6 +6,7 @@ function App () {
     <>
       <div className='container'>
         <Header />
+        <AddInput />
       </div>
     </>
   )
