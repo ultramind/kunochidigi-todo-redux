@@ -38,9 +38,11 @@ Follow these steps to set up the project locally:
     Ensure you are in the project directory.
 
     Run the following command to install the required dependencies:
+    ```bash
     npm install
 
 5: Run the Development Server
     Start the development server with the following command:
+    ```bash
     npm run dev
 6. Open your browser and visit http://localhost:5173/ (or click the port displayed in your terminal) to view the app.
