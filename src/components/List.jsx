@@ -7,6 +7,11 @@ import {
 
 const List = ({ todo }) => {
   const { text, id, isCompleted } = todo
+
+  // deleteTodo
+  const deleteTodo = id => {
+    console.log(id)
+  }
   return (
     <li>
       {isCompleted ? <FaRegCheckSquare /> : <FaRegWindowClose />}
@@ -15,9 +20,9 @@ const List = ({ todo }) => {
         className='text'
         style={{ textDecoration: isCompleted && 'line-through' }}
       >
-        Am working on new project
+        {text}
       </span>
-      <FaRegTrashAlt />
+      <FaRegTrashAlt onClick={() => deleteTodo(id)} />
     </li>
   )
 }
