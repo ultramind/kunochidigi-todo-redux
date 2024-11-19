@@ -5,12 +5,18 @@ import {
   FaRegTrashAlt
 } from 'react-icons/fa'
 
-const List = () => {
+const List = ({ todo }) => {
+  const { text, id, isCompleted } = todo
   return (
     <li>
-      <FaRegWindowClose />
-      <FaRegCheckSquare />
-      <span className='text'>Am working on new project</span>
+      {isCompleted ? <FaRegCheckSquare /> : <FaRegWindowClose />}
+
+      <span
+        className='text'
+        style={{ textDecoration: isCompleted && 'line-through' }}
+      >
+        Am working on new project
+      </span>
       <FaRegTrashAlt />
     </li>
   )

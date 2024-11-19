@@ -3,7 +3,9 @@ import { createSlice } from '@reduxjs/toolkit'
 const todoSlice = createSlice({
   name: 'todos',
   initialState: {
-    todo: JSON.parse(localStorage.getItem('todos')) || []
+    todos: JSON.parse(localStorage.getItem('todos')) || [
+      { text: 'Working on new project', id: 1, isCompleted: false }
+    ]
   },
 
   reducers: {}
@@ -11,4 +13,4 @@ const todoSlice = createSlice({
 
 export const {} = todoSlice.actions
 
-export default todoSlice
+export default todoSlice.reducer
