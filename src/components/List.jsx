@@ -4,13 +4,16 @@ import {
   FaRegCheckSquare,
   FaRegTrashAlt
 } from 'react-icons/fa'
+import { useDispatch } from 'react-redux'
+import { removeTodo } from '../store/TodoSlice'
 
 const List = ({ todo }) => {
+  const dispatch = useDispatch()
   const { text, id, isCompleted } = todo
 
   // deleteTodo
   const deleteTodo = id => {
-    console.log(id)
+    dispatch(removeTodo(id))
   }
   return (
     <li>
